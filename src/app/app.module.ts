@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsTaskComponent } from './details-task/details-task.component';
 import { UpdateTaskComponent } from './update-task/update-task.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UpdateTaskComponent } from './update-task/update-task.component';
     HeaderComponent,
     FooterComponent,
     DetailsTaskComponent,
-    UpdateTaskComponent
+    UpdateTaskComponent,
+    CreateTaskComponent
   ],
   imports: [
     BrowserModule,

@@ -29,4 +29,7 @@ export class HttpClientService {
   updateTask(id: string, value: any){
     return this.httpClient.put<Task>('http://localhost:8080/tasks' + '/' + id , value);
   }
+  public createTask(task) {
+    return this.httpClient.post<Task>('http://localhost:8080/tasks', task);
+  }
 }

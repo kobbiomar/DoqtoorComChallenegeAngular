@@ -3,11 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import {TaskListComponent} from './task-list/task-list.component';
 import {DetailsTaskComponent} from './details-task/details-task.component';
 import {UpdateTaskComponent} from './update-task/update-task.component';
+import {CreateTaskComponent} from './create-task/create-task.component';
 
 const routes: Routes = [
   { path: '', component: TaskListComponent },
   { path: 'details/:id', component: DetailsTaskComponent },
   { path: 'update/:id', component: UpdateTaskComponent },
+  { path: 'add', component: CreateTaskComponent },
+
 
 
 ]
