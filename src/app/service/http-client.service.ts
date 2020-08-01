@@ -32,4 +32,8 @@ export class HttpClientService {
   public createTask(task) {
     return this.httpClient.post<Task>('http://localhost:8080/tasks', task);
   }
+  public deleteTask(task) {
+    return this.httpClient.delete<Task>('http://localhost:8080/tasks' + '/' + task.taskId);
+  }
+
 }

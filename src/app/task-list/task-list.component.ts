@@ -36,4 +36,10 @@ export class TaskListComponent implements OnInit {
   taskUpdate(id: number){
     this.router.navigate(['update', id]);
   }
+  taskDelete(task: Task): void {
+    this.httpClientService.deleteTask(task)
+      .subscribe( () => {
+        this.tasks = this.tasks.filter(u => u !== task);
+      });
+  }
 }
