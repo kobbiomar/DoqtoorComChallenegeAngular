@@ -30,4 +30,7 @@ export class TaskListComponent implements OnInit {
     this.tasks = response;
   }
 
+  taskDetails(id: number){
+    this.router.navigate(['details', id]);
+  }
 }

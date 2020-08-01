@@ -23,4 +23,7 @@ export class HttpClientService {
   getTask() {
     return this.httpClient.get<Task[]>('http://localhost:8080/tasks');
   }
+  getTaskID(id: string): Observable<any> {
+    return this.httpClient.get('http://localhost:8080/tasks' + '/' + id );
+  }
 }

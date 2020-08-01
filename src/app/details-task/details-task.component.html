@@ -1,0 +1,15 @@
+<h2>Task Details</h2>
+
+<hr/>
+<div *ngIf="task">
+  <div>
+    <label><b>Task ID: </b></label> {{task.taskId}}
+  </div>
+  <div>
+    <label><b>Description: </b></label> {{task.description}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Task List</button><br>
