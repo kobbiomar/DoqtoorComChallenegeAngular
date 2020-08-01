@@ -1,0 +1,25 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+
+export class Task {
+  constructor(
+    public taskId: string,
+    public description: string,
+  ) {}
+}
+@Injectable({
+  providedIn: 'root'
+})
+export class HttpClientService {
+
+
+  constructor(
+    private httpClient: HttpClient
+  ) {
+  }
+
+  getTask() {
+    return this.httpClient.get<Task[]>('http://localhost:8080/tasks');
+  }
+}
