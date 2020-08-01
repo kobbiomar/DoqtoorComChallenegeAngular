@@ -26,4 +26,7 @@ export class HttpClientService {
   getTaskID(id: string): Observable<any> {
     return this.httpClient.get('http://localhost:8080/tasks' + '/' + id );
   }
+  updateTask(id: string, value: any){
+    return this.httpClient.put<Task>('http://localhost:8080/tasks' + '/' + id , value);
+  }
 }

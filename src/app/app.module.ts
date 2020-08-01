@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsTaskComponent } from './details-task/details-task.component';
+import { UpdateTaskComponent } from './update-task/update-task.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DetailsTaskComponent } from './details-task/details-task.component';
     TaskListComponent,
     HeaderComponent,
     FooterComponent,
-    DetailsTaskComponent
+    DetailsTaskComponent,
+    UpdateTaskComponent
   ],
   imports: [
     BrowserModule,

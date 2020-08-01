@@ -1,0 +1,14 @@
+<div class="col-md-6">
+  <h2 class="text-center">Update Task</h2>
+  <form #f="ngForm" (ngSubmit)="updateTask()">
+    <div class="form-group">
+      <label for="taskID">TaskID:</label>
+      <input type="text"  [(ngModel)]="task.taskId" placeholder="Task ID" name="name" class="form-control" id="taskID" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input [(ngModel)]="task.description" placeholder="Description" name="description" class="form-control" id="description" required>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="f.invalid">Save</button>
+  </form>
+</div>
